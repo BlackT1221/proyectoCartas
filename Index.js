@@ -1,8 +1,10 @@
-const card = document.getElementById('card')
-card.addEventListener('click', (event)=>{
-    if (document.querySelector("#card.flipped")){
-        card.classList.remove('flipped');
-    }else{
-        card.classList.add('flipped');
+document.addEventListener('DOMContentLoaded', (event) => {
+    for (let i = 1; i <= 8; i++) {
+        const card = document.getElementById(`card${i}`);
+        if (card) {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        }
     }
-})
+});

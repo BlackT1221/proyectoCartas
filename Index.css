@@ -1,12 +1,24 @@
 body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .flip {
     -webkit-perspective: 800;
-    width: 200px;
-    height: 400px;
+    width: 150px;
+    height: 300px;
     position: relative;
     margin: 50px ;
 }
@@ -28,7 +40,7 @@ body{
     font-family: Georgia;
     font-size: 3em;
     text-align: center;
-    line-height: 400px;
+    line-height: 300px;
 }
 .flip .card .front {
     position: absolute;

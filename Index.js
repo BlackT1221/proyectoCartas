@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     let countDownTime = 45;
+    let title = document.getElementById('title');
     let timerP = document.getElementById('timerP');
     let score = 0;
     let flippedCards = [];
@@ -13,7 +14,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             alert("¡Se acabó el tiempo! \n Tu puntuación fue de: " + score);
             let todasLasCartas = document.querySelectorAll('.card');
             Array.from(todasLasCartas).forEach(card => card.classList.add("removed"));
-            ext.classList.remove('removed');
+            text.classList.remove('removed');
+            timerP.classList.add('removed');
+            title.classList.add('removed');
         }
     }, 1000);
 
@@ -47,6 +50,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     if (Array.from(todasLasCartas).every(card => card.classList.contains('removed'))) {
                         alert("¡Has ganado! \n Tu puntuación fue de: " + score);
                         text.classList.remove('removed');
+                        countDownTime = -1;
+                        timerP.classList.add('removed');
+                        title.classList.add('removed');
                     }
                 }
             });

@@ -62,20 +62,16 @@ h1 {
 }
 
 .removed {
-    /* Cambia la opacidad a 0 en lugar de usar display: none */
     opacity: 0;
-    /* Agrega una transición suave a la opacidad durante 0.5 segundos */
     transition: opacity 0.5s ease;
-    /* Agrega un pequeño retraso antes de que la carta desaparezca completamente */
     transition-delay: 0.5s;
-    /* Después de la transición, la carta será invisible pero todavía ocupará espacio */
     visibility: hidden;
 }
+
 
 .container.timer {
     font-family: Georgia;
     font-size: 3em;
-    margin-left: 70%;
-    margin-top: -8.5%;
-    position:static;
+    margin-top: 5%;
+    position: absolute;
 }
